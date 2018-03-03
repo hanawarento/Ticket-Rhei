@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ticket-Rhei</title>
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css' rel='stylesheet' type='text/css'>
+  </head>
+  <body class="container">
+    <h1>Ticket-Rhei　チケット販売管理システム</h1>
+    <section>
+      <h2>Issue Ticket</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="issue-ticket-address">Your Eth Address</label>
+          <input type="text" class="form-control" id="issue-ticket-address" required></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <label for="issue-ticket-name">Name</label>
+          <input type="text" class="form-control" id="issue-ticket-name" required></input>
+        </div>
+        <div class="col-md-4">
+          <label for="issue-ticket-symbol">Symbol</label>
+          <input type="text" class="form-control" id="issue-ticket-symbol" required></input>
+        </div>
+        <div class="col-md-4">
+          <label for="issue-ticket-amount">Amount</label>
+          <input type="number" class="form-control" id="issue-ticket-amount" required></input>
+        </div>
+      </div>
+      <a href="#" onclick="issueTicket()" class="btn btn-primary">Issue</a>
+    </section>
+    <section>
+      <h2>View Ticket</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="view-ticket-address">Owner Address</label>
+          <input type="text" class="form-control" id="view-ticket-address"></input>
+        </div>
+      </div>
+      <a href="#" onclick="viewTicket()" class="btn btn-primary">View</a>
+      <div class="row">
+        <div class="col-md-6">
+          <label for="view-ticket-name">Name</label>
+          <input type="text" class="form-control" id="view-ticket-name" readonly></input>
+        </div>
+        <div class="col-md-6">
+          <label for="view-ticket-symbol">Symbol</label>
+          <input type="text" class="form-control" id="view-ticket-symbol" readonly></input>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <label for="view-ticket-holder">Ticket Holder</label>
+          <textarea class="form-control" id="view-ticket-holder" readonly></textarea>
+        </div>
+      </div>
+    </section>
+  </body>
+  <script src="https://cdn.rawgit.com/ethereum/web3.js/develop/dist/web3.js"></script>
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+  <script src="./index.js"></script>
+</html>
